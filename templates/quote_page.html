@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quote Page</title>
+</head>
+<body>
+    {% if name != None and message != None %}
+      <h1 style="text-align:center;">{{ name }}: {{ message }}</h1>
+    {% else %}
+      <h1 style="text-align:center;">No Name/ No Message!</h1>
+    {% endif %}
+</body>
+</html>
