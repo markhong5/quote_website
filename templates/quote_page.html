@@ -4,14 +4,32 @@
     <meta charset="UTF-8">
     <title>Quote Page</title>
 </head>
+<style>
+    button{
+    margin: -20px -50px;
+    position:relative;
+    top:50%;
+    left:45%;
+    padding:0;
+    margin:0;
+}
+</style>
 <body>
+    <div>
+    <button value="Refresh Page" onClick="window.location.reload();" name = "Random Quote">
+        Random Quote
+    </button>
+    <button>
+        the
+    </button>
+
+    </div>
+    <div>
     {% if name != None and message != None %}
       <h1 style="text-align:center;">{{ name }}: {{ message }}</h1>
     {% else %}
       <h1 style="text-align:center;">No Name/ No Message!</h1>
     {% endif %}
-    <button value="Refresh Page" onClick="window.location.reload();" name = "Random Quote">
-        Random Quote
-    </button>
+    </div>
 </body>
 </html>
