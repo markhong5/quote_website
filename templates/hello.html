@@ -5,3 +5,7 @@
 {% else %}
   <h1>Hello, World!</h1>
 {% endif %}
+
+<button onClick="window.location.href='{{ url_for('quote')}}'">
+  To random quotes
+</button>

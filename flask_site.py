@@ -15,6 +15,12 @@ def chosen_quote(name):
         quote = "Not a valid name"
     return name, quote
 
+
+@app.route('/')
+@app.route('/<name>')
+def hello(name="Mark"):
+    return render_template('hello.html', name=name)
+
 @app.route('/quote/')
 @app.route('/quote/<name><message>')
 def quote(author=None):
@@ -40,13 +46,6 @@ def specific_quote():
     if request.method == 'POST':
         author = request.form['nm']
         return quote(author)
-
-"""
-@app.route('/hello/')
-@app.route('/hello/<name>')
-def hello(name="Mark"):
-    return render_template('hello.html', name=name)
-    """
 
 
 if __name__ == "__main__":
